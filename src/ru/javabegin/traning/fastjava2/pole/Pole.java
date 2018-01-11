@@ -1,15 +1,16 @@
 package ru.javabegin.traning.fastjava2.pole;
 
 
+import ru.javabegin.traning.fastjava2.interface_.PoleInterface;
 
-public class Pole {
-    private String[] sizePole = new String[10];
+public class Pole implements PoleInterface{
+    private String[] sizePole = new String[LENGTH_POLE];
     public Pole() {
 
     }
     public void generatePole(){
         for (int i = 0;i<getSizePole().length;i++){
-            this.setSizePole(i,"о");
+            this.setSizePole(i,POLE_VACUUM);
         }
 
     }

@@ -1,23 +1,16 @@
 package ru.javabegin.traning.fastjava2.ship;
 
+import ru.javabegin.traning.fastjava2.interface_.ShipInterface;
 import ru.javabegin.traning.fastjava2.pole.Pole;
 
 import java.util.Arrays;
 
-public class Ship  {
-    private int countShip = 2;
+public class Ship  implements ShipInterface{
+
 
 
     private String[] shipsCords;
 
-
-    public int getCountShip() {
-        return countShip;
-    }
-
-    public void setCountShip(int countShip) {
-        this.countShip = countShip;
-    }
 
     public String[] getShipsCords() {
         return shipsCords;
@@ -36,15 +29,15 @@ public class Ship  {
     }
     public void shipGenerate(Pole pole){
 
-        int i = getCountShip();
+        int i = COUNT_SHIP;
         while (i!=0){
             int cord = (int) (Math.random() * pole.getSizePole().length);
 
-            if( (getShipsCordsI(cord)!="к")&&(getShipsCordsI(cord)!="р")){
+            if( (getShipsCordsI(cord)!=SHIP_CHAR)&&(getShipsCordsI(cord)!=SHIP_CHAR_LINE)){
 
-                if(cord!=0){setShipsCordsI(cord-1,"р");}
-                setShipsCordsI(cord,"к");
-                if(cord!=getShipsCords().length){setShipsCordsI(cord+1,"р");}
+                if(cord!=0){setShipsCordsI(cord-1,SHIP_CHAR_LINE);}
+                setShipsCordsI(cord,SHIP_CHAR);
+                if(cord!=getShipsCords().length){setShipsCordsI(cord+1,SHIP_CHAR_LINE);}
                 i--;
             }
             else {
