@@ -40,7 +40,7 @@ public class Main {
                     System.out.println("вы потопилевсе корабли");
                     System.out.println("хотите сыграть еще?");
                     String game = in.nextLine();
-                    if(game=="y")
+                    if(game.equals("y"))
                     {
                         pole.generatePole();
                         poleShip.generatePole();
