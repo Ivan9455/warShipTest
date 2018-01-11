@@ -25,7 +25,7 @@ public class Main {
         //System.out.println(Arrays.toString(ship.getShipsCords())+ " генерация кораблей на поле" );
 
         ship.shipGenerate(poleShip);
-        //System.out.println(Arrays.toString(poleShip.getSizePole()) + " shipPole");
+        //System.out.println(Arrays.toString(poleShip.getSizePole()) + " shipPole") ;
         int count = COUNT_SHIP;
         while (count!=0){
             System.out.println("xодите");
